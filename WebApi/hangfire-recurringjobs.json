@@ -1,0 +1,28 @@
+{
+  "HangfireRecurringJobs": [
+    {
+      "Name": "DataExchange_RestJob",
+      "Id": "1",
+      "Cron": "0 0 * * *",
+      "JobTypeName": "DataExchangeJob"
+    },
+    {
+      "Name": "DataExchange_SoapJob",
+      "Id": "2",
+      "Cron": "0 0 * * *",
+      "JobTypeName": "DataExchangeJob"
+    },
+    {
+      "Name": "DataExchange_FtpJob",
+      "Id": "3",
+      "Cron": "0 0 * * *",
+      "JobTypeName": "DataExchangeJob"
+    },
+    {
+      "Name": "DataExchange_RestFtpMultitaskJob",
+      "Id": "4",
+      "Cron": "0 0 * * *",
+      "JobTypeName": "DataExchangeJob"
+    }
+  ]
+}

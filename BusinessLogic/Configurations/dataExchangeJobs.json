@@ -1,0 +1,63 @@
+[
+  {
+    "Job": "1",
+    "Tasks": [
+      {
+        "HandlerTypeName": "RestTaskHandler",
+        "Source": "BusinessLogic.DataExchange.Rest.Tasks.GetRequestExample",
+        "TaskArguments": {
+          "Uri": "https://api.binance.com/api/v3/ticker/price?symbol={0}"
+        }
+      }
+    ]
+  },
+  {
+    "Job": "2",
+    "Tasks": [
+      {
+        "HandlerTypeName": "SoapTaskHandler",
+        "Source": "BusinessLogic.DataExchange.Soap.Tasks.SoapRequestExample",
+        "TaskArguments": {
+          "Uri": "http://www.dneonline.com/calculator.asmx"
+        }
+      }
+    ]
+  },
+  {
+    "Job": "3",
+    "Tasks": [
+      {
+        "HandlerTypeName": "FtpTaskHandler",
+        "Source": "BusinessLogic.DataExchange.Ftp.Tasks.DownloadFileExample",
+        "TaskArguments": {
+          "Host": "ftp://speedtest.tele2.net",
+          "Username": "anonymous",
+          "Password": "anonymous",
+          "Filename": ".*KB\\.zip$"
+        }
+      }
+    ]
+  },
+  {
+    "Job": "4",
+    "Tasks": [
+      {
+        "HandlerTypeName": "RestTaskHandler",
+        "Source": "BusinessLogic.DataExchange.Rest.Tasks.GetRequestExample",
+        "TaskArguments": {
+          "Uri": "https://api.binance.com/api/v3/ticker/price?symbol={0}"
+        }
+      },
+      {
+        "HandlerTypeName": "FtpTaskHandler",
+        "Source": "BusinessLogic.DataExchange.Ftp.Tasks.UploadFileExample",
+        "TaskArguments": {
+          "Host": "ftp://ftp.dlptest.com/",
+          "Username": "dlpuser",
+          "Password": "rNrKYTX9g7z3RgJRmxWuGHbeu",
+          "Filename": "testfile.txt"
+        }
+      }
+    ]
+  }
+]
